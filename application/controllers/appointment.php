@@ -89,8 +89,8 @@ class Appointment extends MY_Controller
                     'rules'   => 'required|val_is_not_zero'
                 ),
                 array(
-                    'field'   => 'notes',
-                    'label'   => 'notes',
+                    'field'   => 'note',
+                    'label'   => 'note',
                     'rules'   => ''
                 )
             ));
