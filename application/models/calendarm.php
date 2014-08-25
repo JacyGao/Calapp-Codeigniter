@@ -27,7 +27,7 @@ class Calendarm extends MY_Model
      * Fetch calendar by ID
      *
      * @author		Jacy Gao
-     * @return		void
+     * @return		object
      * @param		id <calendar.id>
      */
 
@@ -47,7 +47,7 @@ class Calendarm extends MY_Model
      * Fetch all calendars
      *
      * @author		Jacy Gao
-     * @return		void
+     * @return		object
      * @param		void
      */
 

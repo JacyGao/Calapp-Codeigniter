@@ -28,7 +28,7 @@ class Appointmentm extends MY_Model
      * Fetch appointment by ID
      *
      * @author		Jacy Gao
-     * @return		void
+     * @return		object
      * @param		id <appointment.id>
      */
 
@@ -49,7 +49,7 @@ class Appointmentm extends MY_Model
      * Fetch Services based on Calendar ID
      *
      * @author		Jacy Gao
-     * @return		void
+     * @return		object
      * @param		$cid <appointment.calendar_id>
      */
 
