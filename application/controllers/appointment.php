@@ -103,6 +103,22 @@ class Appointment extends MY_Controller
                     'validation_error' => true
                 ));
             }
+            else if(date('Y-m-d', strtotime($this->input->post('start_date'))) > date('Y-m-d', strtotime($this->input->post('end_date'))))
+            {
+                $this->_render('forms/appointmentf', array(
+                    'title' => 'Create Appointment',
+                    'validation_error' => true,
+                    'other_error' => 'The End Date must be later than the Start Date.'
+                ));
+            }
+            else if(date('Y-m-d', strtotime($this->input->post('start_date'))) == date('Y-m-d', strtotime($this->input->post('end_date'))) && date('H:i:s', strtotime($this->input->post('start_time'))) >= date('H:i:s', strtotime($this->input->post('end_time'))))
+            {
+                $this->_render('forms/appointmentf', array(
+                    'title' => 'Create Appointment',
+                    'validation_error' => true,
+                    'other_error' => 'The End Time must be later than the Start Time.'
+                ));
+            }
 
             // Validation passed...
             else

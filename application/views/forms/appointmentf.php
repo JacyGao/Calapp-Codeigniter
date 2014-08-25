@@ -3,6 +3,10 @@
     <p>You need to address the following issues:</p>
     <?php echo validation_errors(); ?>
 
+    <?php if(isset($other_error)):?>
+        <?php echo $other_error; ?>
+
+    <?php endif?>
 <?php endif; ?>
 
 <form action="<?php echo current_url()?>" method="post">
