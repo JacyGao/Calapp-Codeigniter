@@ -11,6 +11,11 @@ class Migration_create_appointment extends CI_Migration {
                 'auto_increment' => TRUE,
                 'null' => FALSE,
             ),
+            'calendar_id' => array(
+                'type' => 'INT',
+                'constraint' => 11,
+                'null' => FALSE,
+            ),
             'title' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '255',
